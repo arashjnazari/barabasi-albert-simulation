@@ -40,13 +40,13 @@ plt.figure(figsize=(8, 5))
 plt.scatter(k_values, pk_values, color="royalblue", alpha=0.7, edgecolors="none",
             label="Data (NetworkX)")
 
-# ب) رسم خط برازش منفی گاما (استفاده از r برای جلوگیری از خطای متنی)
+# ب) رسم خط برازش منفی گاما 
 k_fit = np.linspace(k_values[mask].min(), k_values[mask].max(), 100)
 pk_fit = 10**(slope * np.log10(k_fit) + intercept)
 plt.plot(k_fit, pk_fit, color="crimson", linewidth=2, 
          label=rf"Fit Line: $\gamma \approx {gamma_calc:.2f}$")
 
-# تنظیمات مقیاس و برچسب‌های دو زبانه
+# تنظیمات مقیاس 
 plt.xscale("log")
 plt.yscale("log")
 plt.xlabel("Degree (k) [درجه]")
