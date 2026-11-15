@@ -1,0 +1,3 @@
+model,nodes,edges,mean_degree,max_degree
+Custom,5000,14994,5.9976,296
+NetworkX,5000,14994,5.9976,255
